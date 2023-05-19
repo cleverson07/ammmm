@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+  text-align: center;
+}
+#bloco{
+  font-size: 2em;
+
+ margin: auto;
+  width: 600px;
+  text-align: center;
+}
+.botao{
+  border: none;
+  font-size: 1.5em;
+  color: white;
+  background-color:red;
+  width: 150px;
+  padding: 30px;
+  border-radius: 30px;
+}
+    #btn2 {
+  position: relative;
+  transition: bottom 1s;
+}
+
+#btn2:hover {
+  bottom: -250px;
+}
+.success{
+  color: red;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+  </style>
+</head>
+<body>
+  <h1>Clique no Botão</h1>
+  <div id="bloco" >
+    <h2>Voçê ainda me Ama ?</h2>
+    <button class="botao" id="btn1" >Sim</button>
+    <button class="botao" id="btn2" >Não!</button>
+  </div>
+
+<section id="sec"> </section>
+
+<script>
+const button = document.getElementById('btn1')
+
+function botao(){
+
+if(button.innerText === 'Sim') {
+  button.innerText = 'aeee'
+  const sec = document.getElementById('sec')
+  const texto = document.createElement('p')
+  texto.innerText = 'Eu Tambem te amoo e voce é o amor da minha vida'
+  sec.appendChild(texto)
+  texto.classList.add('success')
+ } 
+ 
+}
+  button.addEventListener('click',botao)
+
+
+
+</script>
+</body>
+</html>
